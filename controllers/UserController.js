@@ -46,6 +46,17 @@ const getUserById = async (req, res) => {
 }
 
 
+const getUserByEmail = async (req, res) => {
+    try {
+        const email = req.params.email;
+        const response = await prisma.user.findFirst({ where: { email: email }});
+        return res.status(200).json({msg: "success", data: response});
+    } catch (error) {
+        return res.status(500).json({msg: error.message});   
+    }
+}
+
+
 const updateUserById = async (req, res) => {
     try {
         const id = req.params.id;
@@ -86,6 +97,7 @@ module.exports = {
     createUser,
     getUsers,
     getUserById,
+    getUserByEmail,
     updateUserById,
     deleteUserById
 }

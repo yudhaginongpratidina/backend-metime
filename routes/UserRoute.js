@@ -5,6 +5,7 @@ const UserController = require("../controllers/UserController");
 
 router.get("/api/users", UserController.getUsers);
 router.get("/api/users/:id", UserController.getUserById);
+router.get("/api/users/email/:email", UserController.getUserByEmail);
 
 router.post("/api/users", UserController.createUser);
 router.patch("/api/users/:id", UserController.updateUserById);
