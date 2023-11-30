@@ -30,6 +30,8 @@ const uploadMusic = async (req, res) => {
     const fileName = req.file.filename;
     const fileExtension = path.extname(fileName).toLowerCase();
 
+    if (fileExtension !== '.mp3') return res.status(400).json({ msg: "Only .mp3 files are allowed" });
+
     // CEK DATA MUSIC
     const fileMusicURLExists = await prisma.music.findFirst({ where: { url: finalMusicURL } })
     if(fileMusicURLExists) return res.status(409).json({msg: "File already exists"});
