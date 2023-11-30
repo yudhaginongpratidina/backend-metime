@@ -1,0 +1,401 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "Me Time API",
+    "dateExported": "2023-11-30T04:04:37.721Z",
+    "version": "1.1",
+    "folders": [
+        {
+            "_id": "8f56c963-935d-4fb4-a955-bcbab5310f1d",
+            "name": "Service User",
+            "containerId": "",
+            "created": "2023-11-30T01:08:25.166Z",
+            "sortNum": 10000
+        },
+        {
+            "_id": "c8ac8744-ddc1-4ade-831d-dec9cf25a669",
+            "name": "Service Music Meditasi",
+            "containerId": "",
+            "created": "2023-11-30T01:08:47.527Z",
+            "sortNum": 20000
+        },
+        {
+            "_id": "287dff27-d4c8-488c-9e82-75a82806db4d",
+            "name": "Service Message",
+            "containerId": "",
+            "created": "2023-11-30T01:24:31.847Z",
+            "sortNum": 30000
+        },
+        {
+            "_id": "6e331d66-b12d-4967-92af-8d903e3a1a24",
+            "name": "Service Sreening",
+            "containerId": "",
+            "created": "2023-11-30T02:31:36.504Z",
+            "sortNum": 40000
+        },
+        {
+            "_id": "e658f4fd-d9b5-432a-8ae8-b9de1b75f121",
+            "name": "Authentication",
+            "containerId": "",
+            "created": "2023-11-30T03:25:14.015Z",
+            "sortNum": 50000
+        }
+    ],
+    "requests": [
+        {
+            "_id": "54c8e594-4bcf-4481-bb1d-99a3c1ba796d",
+            "colId": "abb525c6-e66b-4880-9d68-21e097822e8e",
+            "containerId": "8f56c963-935d-4fb4-a955-bcbab5310f1d",
+            "name": "getUsers",
+            "url": "http://localhost:4000/api/users",
+            "method": "GET",
+            "sortNum": 10000,
+            "created": "2023-11-27T20:25:43.682Z",
+            "modified": "2023-11-29T09:15:45.190Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "52c278bc-a85b-48a7-81aa-a53205c815c7",
+            "colId": "abb525c6-e66b-4880-9d68-21e097822e8e",
+            "containerId": "c8ac8744-ddc1-4ade-831d-dec9cf25a669",
+            "name": "getMusics",
+            "url": "http://localhost:4000/api/musics",
+            "method": "GET",
+            "sortNum": 10000,
+            "created": "2023-11-29T09:30:14.543Z",
+            "modified": "2023-11-29T09:31:10.395Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "eb570c11-38ac-4fdc-9dd5-cbe75a9e993a",
+            "colId": "abb525c6-e66b-4880-9d68-21e097822e8e",
+            "containerId": "8f56c963-935d-4fb4-a955-bcbab5310f1d",
+            "name": "createUser",
+            "url": "http://localhost:4000/api/users",
+            "method": "POST",
+            "sortNum": 20000,
+            "created": "2023-11-29T08:21:02.278Z",
+            "modified": "2023-11-30T03:22:30.683Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"name\" : \"user 1\",\n  \"email\" : \"user1@gmail.com\",\n  \"password\" : \"kesehatan\",\n  \"re_password\" : \"kesehatan\",\n  \"role\" : \"user\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "819fbc5e-5f3f-4297-9027-1fc7fa830f1a",
+            "colId": "abb525c6-e66b-4880-9d68-21e097822e8e",
+            "containerId": "c8ac8744-ddc1-4ade-831d-dec9cf25a669",
+            "name": "UploadMusic",
+            "url": "http://localhost:4000/api/musics",
+            "method": "POST",
+            "sortNum": 20000,
+            "created": "2023-11-29T14:14:54.299Z",
+            "modified": "2023-11-30T03:47:08.120Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "formdata",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "title",
+                        "value": "uji coba"
+                    }
+                ],
+                "files": [
+                    {
+                        "name": "music",
+                        "value": "/home/unknown/Downloads/gta.mp3"
+                    }
+                ]
+            },
+            "tests": []
+        },
+        {
+            "_id": "d1029d5c-989e-410a-bbf6-956380244292",
+            "colId": "abb525c6-e66b-4880-9d68-21e097822e8e",
+            "containerId": "8f56c963-935d-4fb4-a955-bcbab5310f1d",
+            "name": "getUserById",
+            "url": "http://localhost:4000/api/users/4",
+            "method": "GET",
+            "sortNum": 30000,
+            "created": "2023-11-29T08:48:32.305Z",
+            "modified": "2023-11-29T09:16:09.116Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "4fd58e0e-74b4-4017-9678-b4355b016f2b",
+            "colId": "abb525c6-e66b-4880-9d68-21e097822e8e",
+            "containerId": "c8ac8744-ddc1-4ade-831d-dec9cf25a669",
+            "name": "UpdateMusicById",
+            "url": "http://localhost:4000/api/musics/1",
+            "method": "PATCH",
+            "sortNum": 30000,
+            "created": "2023-11-29T14:35:52.211Z",
+            "modified": "2023-11-30T03:49:06.530Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "formdata",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "title",
+                        "value": "Music Update"
+                    }
+                ],
+                "files": [
+                    {
+                        "name": "music",
+                        "value": "/home/unknown/Downloads/gta2.mp3"
+                    }
+                ]
+            },
+            "tests": []
+        },
+        {
+            "_id": "e28f5281-4405-4ad3-bcf7-aeacd4941b5e",
+            "colId": "abb525c6-e66b-4880-9d68-21e097822e8e",
+            "containerId": "8f56c963-935d-4fb4-a955-bcbab5310f1d",
+            "name": "updateUserById",
+            "url": "http://localhost:4000/api/users/4",
+            "method": "PATCH",
+            "sortNum": 40000,
+            "created": "2023-11-29T08:59:54.315Z",
+            "modified": "2023-11-29T09:16:44.068Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"name\" : \"admin 4 update\",\n  \"password\" : \"kesehatan\",\n  \"re_password\" : \"kesehatan\",\n  \"role\" : \"user\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "7a4a3b60-53e9-4b87-8853-0c6536733339",
+            "colId": "abb525c6-e66b-4880-9d68-21e097822e8e",
+            "containerId": "c8ac8744-ddc1-4ade-831d-dec9cf25a669",
+            "name": "getMusicById",
+            "url": "http://localhost:4000/api/musics/1",
+            "method": "GET",
+            "sortNum": 40000,
+            "created": "2023-11-30T01:04:42.404Z",
+            "modified": "2023-11-30T01:04:53.214Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "354e362a-7dc0-44a4-96f9-34cbd674d272",
+            "colId": "abb525c6-e66b-4880-9d68-21e097822e8e",
+            "containerId": "8f56c963-935d-4fb4-a955-bcbab5310f1d",
+            "name": "deleteUserById",
+            "url": "http://localhost:4000/api/users/4",
+            "method": "DELETE",
+            "sortNum": 50000,
+            "created": "2023-11-29T09:11:34.975Z",
+            "modified": "2023-11-29T09:17:09.800Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "be9e1461-f0b0-4fd2-9859-ba6ad940f27b",
+            "colId": "abb525c6-e66b-4880-9d68-21e097822e8e",
+            "containerId": "c8ac8744-ddc1-4ade-831d-dec9cf25a669",
+            "name": "deleteMusicById",
+            "url": "http://localhost:4000/api/musics/1",
+            "method": "DELETE",
+            "sortNum": 50000,
+            "created": "2023-11-30T01:07:19.553Z",
+            "modified": "2023-11-30T01:07:31.670Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "00ad4b0f-921f-4236-b78f-d273945b2fa9",
+            "colId": "abb525c6-e66b-4880-9d68-21e097822e8e",
+            "containerId": "287dff27-d4c8-488c-9e82-75a82806db4d",
+            "name": "getMessages",
+            "url": "http://localhost:4000/api/messages",
+            "method": "GET",
+            "sortNum": 110000,
+            "created": "2023-11-30T01:24:47.153Z",
+            "modified": "2023-11-30T01:25:45.701Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "4ab4844b-c457-405e-bbdb-b3de89a86418",
+            "colId": "abb525c6-e66b-4880-9d68-21e097822e8e",
+            "containerId": "287dff27-d4c8-488c-9e82-75a82806db4d",
+            "name": "createMessage",
+            "url": "http://localhost:4000/api/messages",
+            "method": "POST",
+            "sortNum": 120000,
+            "created": "2023-11-30T01:26:06.796Z",
+            "modified": "2023-11-30T01:28:15.872Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"name\" : \"user 1\",\n  \"email\" : \"user1@gmail.com\",\n  \"phone\" : \"+62 810312213\",\n  \"message\" : \"Tolong tambahkan fitur a untuk mempermudah kami dalam melakukan seach musik\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "19a861b7-efd0-416d-8be1-615b7d7accc6",
+            "colId": "abb525c6-e66b-4880-9d68-21e097822e8e",
+            "containerId": "287dff27-d4c8-488c-9e82-75a82806db4d",
+            "name": "getMessageById",
+            "url": "http://localhost:4000/api/messages/2",
+            "method": "GET",
+            "sortNum": 130000,
+            "created": "2023-11-30T01:29:07.680Z",
+            "modified": "2023-11-30T01:29:21.498Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "88c3da71-faf2-4013-b2c7-fbb8f2f35145",
+            "colId": "abb525c6-e66b-4880-9d68-21e097822e8e",
+            "containerId": "287dff27-d4c8-488c-9e82-75a82806db4d",
+            "name": "deleteMessageById",
+            "url": "http://localhost:4000/api/messages/2",
+            "method": "DELETE",
+            "sortNum": 140000,
+            "created": "2023-11-30T01:29:41.029Z",
+            "modified": "2023-11-30T01:30:31.602Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "2326fe60-08e7-4cac-88df-1c3dbf9a0fda",
+            "colId": "abb525c6-e66b-4880-9d68-21e097822e8e",
+            "containerId": "6e331d66-b12d-4967-92af-8d903e3a1a24",
+            "name": "getScreenings",
+            "url": "http://localhost:4000/api/screenings",
+            "method": "GET",
+            "sortNum": 150000,
+            "created": "2023-11-30T02:31:44.556Z",
+            "modified": "2023-11-30T02:42:04.377Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "c2b35cf6-f54f-4cfd-8442-896a33fbbc4d",
+            "colId": "abb525c6-e66b-4880-9d68-21e097822e8e",
+            "containerId": "6e331d66-b12d-4967-92af-8d903e3a1a24",
+            "name": "createScreening",
+            "url": "http://localhost:4000/api/screenings",
+            "method": "POST",
+            "sortNum": 160000,
+            "created": "2023-11-30T02:34:19.741Z",
+            "modified": "2023-11-30T02:37:29.448Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"screening\" : \"test depresi\",\n  \"name\" : \"user 1\",\n  \"score\" : 20,\n  \"hasil\" : \"tinggi\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "ac27d7e7-642b-4b85-9424-7b29adb321ee",
+            "colId": "abb525c6-e66b-4880-9d68-21e097822e8e",
+            "containerId": "6e331d66-b12d-4967-92af-8d903e3a1a24",
+            "name": "getLastScreening",
+            "url": "http://localhost:4000/api/screenings/user 1/test depresi",
+            "method": "GET",
+            "sortNum": 170000,
+            "created": "2023-11-30T02:39:10.441Z",
+            "modified": "2023-11-30T02:42:25.030Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "aefb15c8-03ce-4d30-b0b0-275717cdd9b9",
+            "colId": "abb525c6-e66b-4880-9d68-21e097822e8e",
+            "containerId": "6e331d66-b12d-4967-92af-8d903e3a1a24",
+            "name": "deleteScreeningById",
+            "url": "http://localhost:4000/api/screenings/2",
+            "method": "DELETE",
+            "sortNum": 180000,
+            "created": "2023-11-30T02:48:53.659Z",
+            "modified": "2023-11-30T02:50:23.980Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "fbcad83e-b43c-4a98-abb8-0d0be2245256",
+            "colId": "abb525c6-e66b-4880-9d68-21e097822e8e",
+            "containerId": "e658f4fd-d9b5-432a-8ae8-b9de1b75f121",
+            "name": "LoginAdmin",
+            "url": "http://localhost:4000/api/login/admin",
+            "method": "POST",
+            "sortNum": 190000,
+            "created": "2023-11-30T03:25:23.256Z",
+            "modified": "2023-11-30T03:32:26.228Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"email\" : \"admin1@gmail.com\",\n  \"password\" : \"kesehatan\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "3dd166ef-fbae-43e7-8040-423ba1f79629",
+            "colId": "abb525c6-e66b-4880-9d68-21e097822e8e",
+            "containerId": "e658f4fd-d9b5-432a-8ae8-b9de1b75f121",
+            "name": "Login User",
+            "url": "http://localhost:4000/api/login/user",
+            "method": "POST",
+            "sortNum": 200000,
+            "created": "2023-11-30T03:33:20.447Z",
+            "modified": "2023-11-30T03:37:38.876Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"email\" : \"admin1@gmail.com\",\n  \"password\" : \"kesehatan\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "25865a01-24e9-4001-9ecf-98a19171bac0",
+            "colId": "abb525c6-e66b-4880-9d68-21e097822e8e",
+            "containerId": "8f56c963-935d-4fb4-a955-bcbab5310f1d",
+            "name": "Get User By Email",
+            "url": "http://localhost:4000/api/users/email/user1@gmail.com",
+            "method": "GET",
+            "sortNum": 210000,
+            "created": "2023-11-30T03:52:33.859Z",
+            "modified": "2023-11-30T03:53:11.858Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        }
+    ]
+}

@@ -16,6 +16,7 @@ https://github.com/alpa-developer/backend-mitime/archive/refs/heads/main.zip
 * npx prisma db push
 * npm run dev (untuk development)
 * npm run start (untuk production)
+* jangan lupa untuk import file collection untuk uji coba api nya
 
 ## TOOLS / EXTENSION YANG DIGUNAKAN
 * vscode
