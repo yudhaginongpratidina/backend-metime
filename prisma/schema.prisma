@@ -1,6 +1,6 @@
 generator client {
   provider = "prisma-client-js"
-  output   = "./generated/client"
+  // output   = "./generated/client"
 }
 
 datasource db {
@@ -45,6 +45,16 @@ model Screening {
   name      String
   score     Int
   hasil     String
+
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @default(now())
+}
+
+model Testimoni {
+  id      Int     @id @default(autoincrement())
+  name    String  
+  rating  Int
+  message String  @db.Text
 
   createdAt DateTime  @default(now())
   updatedAt DateTime  @default(now())
