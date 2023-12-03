@@ -1,5 +1,5 @@
 ### MENDAPATKAN SEMUA DATA USER
-GET http://localhost:4000/api/users
+GET http://localhost:4000/api/users 
 
 
 
