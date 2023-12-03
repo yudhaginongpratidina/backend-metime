@@ -9,7 +9,6 @@ router.get("/api/screenings/:name", ScreeningController.getScreeningByName);
 router.post("/api/screenings", ScreeningController.createScreening);
 router.patch("/api/screenings/:id", ScreeningController.updateScreeningById);
 
-
 router.delete("/api/screenings/:id", ScreeningController.deleteScreeningById);
 
 module.exports = router;
