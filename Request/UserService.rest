@@ -1,0 +1,73 @@
+### MENDAPATKAN SEMUA DATA USER
+GET http://localhost:4000/api/users
+
+
+
+### MEMBUAT USER BARU (User)
+POST http://localhost:4000/api/users
+Content-Type: application/json
+
+{
+    "email" : "user1@gmail.com",
+    "password" : "user1@gmail.com",
+    "re_password" : "user1@gmail.com",
+    "role" : "user"
+}
+
+
+
+### MEMBUAT USER BARU (Admin)
+POST http://localhost:4000/api/users
+Content-Type: application/json
+
+{
+    "email" : "admin1@gmail.com",
+    "password" : "admin1@gmail.com",
+    "re_password" : "admin1@gmail.com",
+    "role" : "admin"
+}
+
+
+
+### MENDAPATKAN DATA USER BERDASARKAN ID
+GET http://localhost:4000/api/users/3
+
+
+
+### MENDAPATKAN DATA USER BERDASARKAN EMAIL
+GET http://localhost:4000/api/users/email/admin1@gmail.com
+
+
+
+### MELAKUKAN UPDATE DATA EMAIL BERDASARKAN ID
+PATCH http://localhost:4000/api/users/email/2
+Content-Type: application/json
+
+{
+    "email" : "admin1@gmail.com"
+}
+
+
+
+### MELAKUKAN UPDATE DATA NAMA BERDASARKAN ID
+PATCH http://localhost:4000/api/users/name/2
+Content-Type: application/json
+
+{
+    "name" : "admin"
+}
+
+
+
+### MELAKUKAN UPDATE DATA PASSWORD BERDASARKAN ID
+PATCH http://localhost:4000/api/users/password/2
+Content-Type: application/json
+
+{
+    "password" : "kesehatan",
+    "re_password" : "kesehatan"
+}
+
+
+### DELETE DATA USER BERDASARKAN ID
+DELETE http://localhost:4000/api/users/1
