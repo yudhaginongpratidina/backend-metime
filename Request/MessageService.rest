@@ -1,0 +1,25 @@
+### MENDAPATKAN SEMUA DATA MESSAGE
+GET http://localhost:4000/api/messages
+
+
+
+### MENDAPATKAN DATA MESSAGE BERDASARKANA ID
+GET http://localhost:4000/api/messages/2
+
+
+
+### MEMBUAT PESAN BARU
+POST http://localhost:4000/api/messages
+Content-Type: application/json
+
+{
+    "name"      : "user 1 comment",
+    "email"     : "user1@gmail.com",
+    "phone"     : "091213++",
+    "message"   : "pesan sudah terkirim"
+}
+
+
+
+### MENGHAPUS DATA PESAN
+DELETE http://localhost:4000/api/messages/2
