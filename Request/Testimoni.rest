@@ -1,0 +1,18 @@
+### MENDAPATKAN DATA TESTIMONI
+GET http://localhost:4000/api/testimoni
+
+### MENDAPATKAN DATA TESTIMONI BERDASARKAN ID
+GET http://localhost:4000/api/testimoni/1
+
+### MEMBUAT TESTIMONI BARU
+POST http://localhost:4000/api/testimoni
+Content-Type: application/json
+
+{
+    "name"      : "user 1",
+    "rating"    : 4,
+    "message"   : "Platform web ini sangat membantu kami untuk melakukan pengecekan kondisi mental"
+}
+
+### MENGHAPUS DATA TESTIMONI BERDASARKAN ID
+DELETE  http://localhost:4000/api/testimoni/2

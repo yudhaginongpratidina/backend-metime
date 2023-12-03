@@ -33,6 +33,8 @@ const createTestimoni = async (req, res) => {
 
 const deleteTestimoniById = async (req, res) => {
     try {
+        const exist = await prisma.testimoni.findFirst({ where: { id: Number(req.params.id) }});
+        if (!exist) return res.status(404).json({ msg: 'Testimoni not found' });
         const response  = await prisma.testimoni.delete({ where: { id: Number(req.params.id) } })
         return res.status(200).json({msg: "deleted successfully", data: response});
     } catch (error) {
