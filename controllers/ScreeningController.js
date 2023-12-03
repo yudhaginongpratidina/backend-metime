@@ -11,36 +11,39 @@ const getScreenings = async (req, res) => {
     }
 }
 
-const getLast_Screenings_ByName_With_Screening = async (req, res) => {
+
+const getScreeningByName = async (req, res) => {
     try {
-        const { name, screening } = req.params;
-
-        const response = await prisma.screening.findFirst({
-            where: {
-                name: name,
-                screening: screening
-            },
-            orderBy: {
-                id: 'desc'
-            }
-        })
-
+        const name = req.params.name;
+        const response = await prisma.screening.findFirst({ where: { name: name }});
         return res.status(200).json({msg: "success", data: response});
     } catch (error) {
         return res.status(500).json({msg: error.message});
     }
 }
 
+
 const createScreening = async (req, res) => {
     try {
-        const { screening, name, score, hasil } = req.body;
+        const { 
+            name, 
+            tesdepresi,
+            tesstress,
+            tesbunuhdiri,
+            tescemas,
+            teskepribadian,
+            tesburnout 
+        } = req.body;
 
         const response = await prisma.screening.create({
             data: {
-                screening: screening,
                 name: name,
-                score: score,
-                hasil: hasil
+                tesdepresi: tesdepresi,
+                tesstress: tesstress,
+                tesbunuhdiri: tesbunuhdiri,
+                tescemas: tescemas,
+                teskepribadian: teskepribadian,
+                tesburnout: tesburnout
             }
         })
 
@@ -50,6 +53,39 @@ const createScreening = async (req, res) => {
     }
 }
 
+
+const updateScreeningById = async (req, res) => {
+    try {
+        const id = req.params.id;
+        const { 
+            name, 
+            tesdepresi,
+            tesstress,
+            tesbunuhdiri,
+            tescemas,
+            teskepribadian,
+            tesburnout 
+        } = req.body;
+
+        const response = await prisma.screening.update({
+            where: { id : Number(id) },
+            data: {
+                name: name,
+                tesdepresi: tesdepresi,
+                tesstress: tesstress,
+                tesbunuhdiri: tesbunuhdiri,
+                tescemas: tescemas,
+                teskepribadian: teskepribadian,
+                tesburnout: tesburnout,
+                updatedAt: new Date()
+            }
+        })
+
+        return res.status(200).json({msg: "Update Name successfully", data: response});
+    } catch (error) {
+        return res.status(500).json({msg: error.message});
+    }
+}
 
 const deleteScreeningById = async (req, res) => {
     try {
@@ -67,7 +103,8 @@ const deleteScreeningById = async (req, res) => {
 
 module.exports = {
     getScreenings,
-    getLast_Screenings_ByName_With_Screening,
+    getScreeningByName,
     createScreening,
+    updateScreeningById,
     deleteScreeningById
 }

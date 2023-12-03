@@ -40,11 +40,14 @@ model Message {
 }
 
 model Screening {
-  id        Int       @id @default(autoincrement())
-  screening String
-  name      String
-  score     Int
-  hasil     String
+  id              Int       @id @default(autoincrement())
+  name            String
+  tesdepresi      Int?
+  tesstress       Int?
+  tesbunuhdiri    Int?
+  tescemas        Int?
+  teskepribadian  Int?
+  tesburnout      Int?
 
   createdAt DateTime  @default(now())
   updatedAt DateTime  @default(now())
