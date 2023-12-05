@@ -8,57 +8,55 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
+
+
 model User {
-  id        Int       @id @default(autoincrement())
-  name      String?    @db.VarChar(60)
-  email     String    @unique @db.VarChar(60)
-  password  String    @db.Text
-  role      String    @db.VarChar(60)
-
-  createdAt DateTime  @default(now())
-  updatedAt DateTime  @default(now())
-}
-
-model Music {
-  id        Int       @id @default(autoincrement())
-  title     String
-  url       String
-
-  createdAt DateTime  @default(now())
-  updatedAt DateTime  @default(now())
-}
-
-model Message {
-  id        Int       @id @default(autoincrement())
-  name      String
-  email     String
-  phone     String
-  message   String    @db.Text
-
-  createdAt DateTime  @default(now())
-  updatedAt DateTime  @default(now())
-}
-
-model Screening {
   id              Int       @id @default(autoincrement())
-  name            String
-  tesdepresi      Int?
-  tesstress       Int?
-  tesbunuhdiri    Int?
-  tescemas        Int?
-  teskepribadian  Int?
-  tesburnout      Int?
+  firstName       String?
+  lastName        String?
+  email           String    
+  password        String
+  image           String?
+
+  tesdepresi      Int?      @default(0)
+  tesstress       Int?      @default(0)
+  tesbunuhdiri    Int?      @default(0)
+  tescemas        Int?      @default(0)
+  teskepribadian  Int?      @default(0)
+  tesburnout      Int?      @default(0)
+
+  testimoni       Testimoni[]
 
   createdAt DateTime  @default(now())
   updatedAt DateTime  @default(now())
 }
+
+
+
 
 model Testimoni {
-  id      Int     @id @default(autoincrement())
-  name    String  
-  rating  Int
-  message String  @db.Text
+  id        Int     @id @default(autoincrement())
+
+  user      User    @relation(fields: [userId], references: [id])
+  userId    Int
+
+  rating    Int
+  message   String  @db.Text
 
   createdAt DateTime  @default(now())
-  updatedAt DateTime  @default(now())
 }
+
+
+
+model Message {
+  id            Int       @id @default(autoincrement())
+  firstName     String
+  lastName      String
+  email         String
+  phone         String
+  message       String    @db.Text
+
+  createdAt DateTime  @default(now())
+}
+
+

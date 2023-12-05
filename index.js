@@ -19,7 +19,6 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 
 const UserRoute = require('./routes/UserRoute');
-const MusicRoute = require('./routes/MusicRoute');
 const MessageRoute = require('./routes/MessageRoute');
 const ScreeningRoute = require('./routes/ScreeningRoute');
 const TestimoniRoute = require('./routes/TestimoniRoute');
@@ -27,7 +26,6 @@ const AuthRoute = require('./routes/AuthRoute');
 
 // ROUTES
 app.use(UserRoute);
-app.use(MusicRoute);
 app.use(MessageRoute);
 app.use(ScreeningRoute);
 app.use(TestimoniRoute);

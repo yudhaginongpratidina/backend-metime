@@ -5,41 +5,28 @@ const prisma = new PrismaClient();
 const getMessages = async (req, res) => {
     try {
         const response = await prisma.message.findMany();
-        return res.status(200).json({msg: "success", data: response});
+        return res.status(200).json({msg: "Success", data: response});
     } catch (error) {
         return res.status(500).json({msg: error.message});
     }
 }
 
 
-
-const getMessageById = async (req, res) => {
-    try {
-        const response = await prisma.message.findFirst({ where: { id: Number(req.params.id) } });
-        if(!response) return res.status(404).json({msg: "Message not found"});
-        return res.status(200).json({msg: "Success get message", response});
-    } catch (error) {
-        console.log(error);
-    }
-}
-
-
-
-
 const createMessage = async (req, res) => {
     try {
-        const { name, email, phone,  message } = req.body;
+        const { firstName, lastName, email, phone,  message } = req.body;
 
         const response = await prisma.message.create({
             data: {
-                name: name,
+                firstName: firstName,
+                lastName: lastName,
                 email: email,
                 phone: phone,
                 message: message
             }
         })
 
-        return res.status(201).json({msg: "message sent successfully", data: response});
+        return res.status(201).json({msg: "Message created successfully", data: response});
     } catch (error) {
         return res.status(500).json({msg: error.message});
     }
@@ -51,8 +38,7 @@ const createMessage = async (req, res) => {
 const deleteMessageById = async (req, res) => {
     try {
         const id = req.params.id;
-
-        // CEK DATA
+        
         const existingMessage = await prisma.message.findFirst({ where: { id: Number(id) } });
         if (!existingMessage) return res.status(404).json({ msg: 'Message not found' });
 
@@ -67,7 +53,6 @@ const deleteMessageById = async (req, res) => {
 
 module.exports = {
     getMessages,
-    getMessageById,
     createMessage,
     deleteMessageById
 }
