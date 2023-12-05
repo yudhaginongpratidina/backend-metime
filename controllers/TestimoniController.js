@@ -23,8 +23,8 @@ const getTestimoniById = async (req, res) => {
 
 const createTestimoni = async (req, res) => {
     try {
-        const { name, rating, message } = req.body;
-        const response = await prisma.testimoni.create({ data: { name: name, rating: rating, message: message}})
+        const { userId, name, rating, message } = req.body;
+        const response = await prisma.testimoni.create({ data: { userId: userId, name: name, rating: rating, message: message}})
         return res.status(201).json({msg: "Testimoni created successfully", response});
     } catch (error) {
         return res.status(500).json({msg: error.message});
