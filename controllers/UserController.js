@@ -83,8 +83,7 @@ const updateUserById = async (req, res) => {
             firstName, 
             lastName, 
             email, 
-            password, 
-            re_password,
+            password,
             
             tesdepresi,
             tesstress,
@@ -94,14 +93,15 @@ const updateUserById = async (req, res) => {
             tesburnout
         } = req.body;
 
+        const hashedPassword = await bcrypt.hash(password, 10);
+
         const response = await prisma.user.update({
             where: { id: Number(id) },
             data: {
                 firstName       : firstName,
                 lastName        : lastName,
                 email           : email,
-                password        : password,
-                re_password     : re_password,
+                password        : hashedPassword,
                 tesdepresi      : tesdepresi,
                 tesstress       : tesstress,
                 tesbunuhdiri    : tesbunuhdiri,
