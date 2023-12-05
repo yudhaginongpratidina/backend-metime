@@ -16,7 +16,7 @@ model User {
   lastName        String?
   email           String    
   password        String
-  image           String?
+  image           String?   @db.Text
 
   tesdepresi      Int?      @default(0)
   tesstress       Int?      @default(0)
