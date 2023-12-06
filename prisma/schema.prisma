@@ -27,6 +27,7 @@ model User {
 
   testimoni       Testimoni[]
   forumDiskusi    ForumDiskusi[]
+  message        Message[]
 
   createdAt DateTime  @default(now())
   updatedAt DateTime  @default(now())
@@ -90,12 +91,11 @@ model Testimoni {
 
 model Message {
   id            Int       @id @default(autoincrement())
-  firstName     String
-  lastName      String
-  email         String
-  phone         String
-  message       String    @db.Text
 
+  user          User      @relation(fields: [userId], references: [id])
+  userId        Int
+
+  message       String    @db.Text
   createdAt DateTime  @default(now())
 }
 

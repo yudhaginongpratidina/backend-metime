@@ -6,16 +6,12 @@ GET http://localhost:4000/api/messages
 POST http://localhost:4000/api/messages
 Content-Type: application/json
 
-{
-    
-    "firstName"     : "user",
-    "lastName"      : "dua",
-    "email"         : "user1@gmail.com",
-    "phone"         : "091213++",
+{    
+    "userId"        : 6,
     "message"       : "pesan sudah terkirim satu"
 }
 
 
 
 ### MENGHAPUS DATA PESAN
-DELETE http://localhost:4000/api/messages/3
+DELETE http://localhost:4000/api/messages/1

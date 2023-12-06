@@ -14,14 +14,11 @@ const getMessages = async (req, res) => {
 
 const createMessage = async (req, res) => {
     try {
-        const { firstName, lastName, email, phone,  message } = req.body;
+        const { userId, message } = req.body;
 
         const response = await prisma.message.create({
             data: {
-                firstName: firstName,
-                lastName: lastName,
-                email: email,
-                phone: phone,
+                userId: userId,
                 message: message
             }
         })
