@@ -1,0 +1,45 @@
+### MENDAPATKAN SEMUA DATA ADMIN
+GET http://localhost:4000/api/admin
+
+
+
+### REGISTER ATAU MEMBUAT ADMIN BARU
+POST http://localhost:4000/api/admin
+Content-Type: application/json
+
+{
+    "email" : "admin@gmail.com",
+    "password" : "admin",
+    "re_password" : "admin"
+}
+
+### MENDAPATKAN DATA ADMIN BERDASARKAN ID
+GET http://localhost:4000/api/admin/2
+
+
+### MELAKUKAN UPDATE DATA ADMIN BERDASARKAN ID
+PATCH http://localhost:4000/api/admin/2
+Content-Type: application/json
+
+{
+    "email" : "admin1@gmail.com",
+    "password" : "kesehatan",
+    "re_password" : "kesehatan"
+}
+
+### MELAKUKAN DELETE DATA ADMIN BERDASARKAN ID
+DELETE http://localhost:4000/api/admin/2
+
+
+
+### MELAKUKAN LOGIN ADMIN
+POST http://localhost:4000/api/admin/login
+Content-Type: application/json
+
+{
+    "email" : "admin1@gmail.com",
+    "password" : "kesehatan",
+    "re_password" : "kesehatan"
+}
+
+

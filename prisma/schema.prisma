@@ -26,9 +26,48 @@ model User {
   tesburnout      Int?      @default(0)
 
   testimoni       Testimoni[]
+  forumDiskusi    ForumDiskusi[]
 
   createdAt DateTime  @default(now())
   updatedAt DateTime  @default(now())
+}
+
+
+
+model Admin {
+  id        Int     @id @default(autoincrement())
+  email     String
+  password  String
+
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @default(now())
+}
+
+
+
+model ForumDiskusi {
+  id      Int     @id @default(autoincrement())
+
+  user    User    @relation(fields: [userId], references: [id])
+  userId  Int
+
+  title   String
+  text    String  @db.Text
+
+  createdAt DateTime  @default(now())
+
+  forumComment ForumComment[]
+}
+
+
+model ForumComment {
+  id               Int     @id @default(autoincrement())
+
+  forumDiskusi    ForumDiskusi @relation(fields: [forumDiskusiId], references: [id])
+  forumDiskusiId  Int
+  comment         String
+  
+  createdAt DateTime  @default(now())
 }
 
 

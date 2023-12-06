@@ -21,11 +21,13 @@ app.use(express.static(path.join(__dirname, 'public')));
 const UserRoute = require('./routes/UserRoute');
 const MessageRoute = require('./routes/MessageRoute');
 const TestimoniRoute = require('./routes/TestimoniRoute');
+const AdminController = require('./routes/AdminRoute');
 
 // ROUTES
 app.use(UserRoute);
 app.use(MessageRoute);
 app.use(TestimoniRoute);
+app.use(AdminController);
 
 // ROUTE JIKA URLNYA TIDAK ADA, MAKA AKAN MENAMPILKAN PESAN JSON YAITU NOT FOUND
 app.get('*', (req, res) => res.json({message: 'Not Found'}));
