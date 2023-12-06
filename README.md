@@ -3,5 +3,6 @@
 * [API untuk user](./docs/user.md)
 * [API untuk testimoni](./docs/testimoni.md)
 * [API untuk admin](./docs/admin.md)
+* [API untuk forum](./docs/forum.md)
 
 
