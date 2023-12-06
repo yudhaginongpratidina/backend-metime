@@ -1,0 +1,15 @@
+### MEMBUAT COMMENT BARU DI FORUM
+POST http://localhost:4000/api/forum/comments
+Content-Type: application/json
+
+{
+    "forumDiskusiId" : 1,
+    "comment" : "Komentar kedua"
+}
+
+### MENDAPATKAN SEMUA KOMENTAR BERDASARKAN ID FORUM
+GET http://localhost:4000/api/forum/comments/1
+
+
+### HAPUS COMMENT BERDASARKAN ID
+DELETE http://localhost:4000/api/forum/comments/2
