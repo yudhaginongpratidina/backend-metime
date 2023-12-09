@@ -3,8 +3,9 @@ POST http://localhost:4000/api/forum/comments
 Content-Type: application/json
 
 {
+    "userId" : 5,
     "forumDiskusiId" : 1,
-    "comment" : "Komentar kedua"
+    "comment" : "Komentar satu"
 }
 
 ### MENDAPATKAN SEMUA KOMENTAR BERDASARKAN ID FORUM
@@ -12,4 +13,4 @@ GET http://localhost:4000/api/forum/comments/1
 
 
 ### HAPUS COMMENT BERDASARKAN ID
-DELETE http://localhost:4000/api/forum/comments/2
+DELETE http://localhost:4000/api/forum/comments/1

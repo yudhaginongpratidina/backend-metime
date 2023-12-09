@@ -3,10 +3,11 @@ const prisma = new PrismaClient();
 
 const createForumComment = async (req, res) => {
     try {
-        const {forumDiskusiId, comment} = req.body;
+        const { userId, forumDiskusiId, comment} = req.body;
 
         const response = await prisma.forumComment.create({
             data: {
+                userId: Number(userId),
                 forumDiskusiId: forumDiskusiId,
                 comment: comment
             }

@@ -33,7 +33,7 @@ Content-Type: application/json
 
 
 ### DELETE DATA USER BERDASARKAN ID
-DELETE http://localhost:4000/api/users/14
+DELETE http://localhost:4000/api/users/7
 
 ### LOGIN USER
 POST http://localhost:4000/api/login

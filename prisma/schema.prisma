@@ -27,6 +27,7 @@ model User {
 
   testimoni       Testimoni[]
   forumDiskusi    ForumDiskusi[]
+  forumComment    ForumComment[]
   message        Message[]
 
   createdAt DateTime  @default(now())
@@ -63,6 +64,9 @@ model ForumDiskusi {
 
 model ForumComment {
   id               Int     @id @default(autoincrement())
+
+  user             User    @relation(fields: [userId], references: [id])
+  userId           Int
 
   forumDiskusi    ForumDiskusi @relation(fields: [forumDiskusiId], references: [id])
   forumDiskusiId  Int
