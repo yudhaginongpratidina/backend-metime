@@ -1,15 +1,15 @@
 ### MEMBUAT COMMENT BARU DI FORUM
-POST http://localhost:4000/api/forum/comments
+POST http://195.35.8.190:4000/api/forum/comments
 Content-Type: application/json
 
 {
     "userId" : 5,
-    "forumDiskusiId" : 1,
-    "comment" : "Komentar satu"
+    "forumDiskusiId" : 3,
+    "comment" : "Tes memberikan komentar pada salah satu forum diskusi"
 }
 
 ### MENDAPATKAN SEMUA KOMENTAR BERDASARKAN ID FORUM
-GET http://localhost:4000/api/forum/comments/1
+GET http://195.35.8.190:4000/api/forum/comments/3
 
 
 ### HAPUS COMMENT BERDASARKAN ID

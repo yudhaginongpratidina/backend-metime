@@ -119,6 +119,40 @@ const updateUserById = async (req, res) => {
 }
 
 
+const updateUserTestById = async (req, res) => {
+    try {
+        const id = req.params.id;
+
+        const { 
+            tesdepresi,
+            tesstress,
+            tesbunuhdiri,
+            tescemas,
+            teskepribadian,
+            tesburnout
+        } = req.body;
+
+
+        const response = await prisma.user.update({
+            where: { id: Number(id) },
+            data: {
+                tesdepresi      : tesdepresi,
+                tesstress       : tesstress,
+                tesbunuhdiri    : tesbunuhdiri,
+                tescemas        : tescemas,
+                teskepribadian  : teskepribadian,
+                tesburnout      : tesburnout
+            }
+        })
+
+        return res.status(200).json({msg: "Update Name successfully", data: response});
+    } catch (error) {
+        console.error('Error updating user:', error);
+        res.status(500).json({msg: "Internal Server Error"});
+    }
+}
+
+
 
 
 const deleteUserById = async (req, res) => {
@@ -158,6 +192,7 @@ module.exports = {
     getUsers,
     getUserById,
 
+    updateUserTestById,
     updateUserById,
     deleteUserById,
     login

@@ -1,5 +1,5 @@
 ### MENDAPATKAN SEMUA DATA FORUM
-GET http://localhost:4000/api/forum
+GET http://195.35.8.190:4000/api/forum
 
 
 ### MENDAPATKAN DATA FORUM BERDASARKAN ID
@@ -7,13 +7,13 @@ GET http://localhost:4000/api/forum/1
 
 
 ### MEMBUAT THREAD
-POST http://localhost:4000/api/forum
+POST http://195.35.8.190:4000/api/forum
 Content-Type: application/json
 
 {
-    "userId" : 7,
-    "title" : "Diskusi Terbuka 1",
-    "text" : "Ini diskusi terbuka"
+    "userId" : 5,
+    "title" : "tes membuat diskusi baru di forum",
+    "text" : "testing "
 }
 
 ### MENGHAPUS TREED BERDASARKAN ID

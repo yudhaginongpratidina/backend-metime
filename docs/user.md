@@ -1,3 +1,39 @@
+## UPDATE TEST KESEHATAN USER
+```
+PATCH http://localhost:4000/api/users/test/9
+Content-Type: application/json
+
+{
+    "tesstress" : 50,
+    "teskepribadian" : 10
+}
+```
+```
+{
+  "msg": "Update Name successfully",
+  "data": {
+    "id": 9,
+    "firstName": "kyouya",
+    "lastName": "kun",
+    "email": "kyouya@gmail.com",
+    "password": "$2b$10$uH3P.f73NepnwPFaAm3WYOMvt9dOnwZIqt86ZIeHzB2BQzrH3JWsW",
+    "image": "https://robohash.org/1702158983529.png",
+    "tesdepresi": 0,
+    "tesstress": 50,
+    "tesbunuhdiri": 0,
+    "tescemas": 0,
+    "teskepribadian": 10,
+    "tesburnout": 0,
+    "createdAt": "2023-12-09T21:56:24.720Z",
+    "updatedAt": "2023-12-09T21:56:24.720Z"
+  }
+}
+```
+
+
+
+
+
 ## MENDAPATKAN SEMUA DATA USERS
 ```
 GET http://localhost:4000/api/users
@@ -61,17 +97,16 @@ Content-Type: application/json
 
 
 ## MELAKUKAN UPDATE DATA USER BERDASARKAN ID
-untuk data yang di update tinggal menyesuaikan saja
-semisal kita ingin update tescemas, tinggal kita update saja test cemasnya,
-kalau kita mau update testdepresi, tinggal kita ganti saja tescemasnya menjadi
-tesdepresi, dsb (tinggal sesuikan key nya saja) dan idnya
-
 ```
-PATCH http://localhost:4000/api/users/14
+PATCH http://localhost:4000/api/users/9
 Content-Type: application/json
 
 {
-    "tescemas" : 10
+    "firstName"     : "kyouya",
+    "lastName"      : "kun",
+    "email"         : "kyouya@gmail.com",
+    "password"      : "kesehatan",
+    "re_password"   : "kesehatan"
 }
 ```
 
@@ -79,20 +114,20 @@ Content-Type: application/json
 {
   "msg": "Update Name successfully",
   "data": {
-    "id": 14,
-    "firstName": "user",
-    "lastName": "satu",
-    "email": "user2@gmail.com",
-    "password": "$2b$10$LopiKw1ddEzD/4KDfBphje9XByrxDZfdUVD2U1W9jgDiWZwgWbVXS",
-    "image": "https://robohash.org/1701779340850.png",
+    "id": 9,
+    "firstName": "kyouya",
+    "lastName": "kun",
+    "email": "kyouya@gmail.com",
+    "password": "$2b$10$uH3P.f73NepnwPFaAm3WYOMvt9dOnwZIqt86ZIeHzB2BQzrH3JWsW",
+    "image": "https://robohash.org/1702158983529.png",
     "tesdepresi": 0,
     "tesstress": 0,
     "tesbunuhdiri": 0,
-    "tescemas": 10,
+    "tescemas": 0,
     "teskepribadian": 0,
     "tesburnout": 0,
-    "createdAt": "2023-12-05T12:29:19.947Z",
-    "updatedAt": "2023-12-05T12:29:19.947Z"
+    "createdAt": "2023-12-09T21:56:24.720Z",
+    "updatedAt": "2023-12-09T21:56:24.720Z"
   }
 }
 ```

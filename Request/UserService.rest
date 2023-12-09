@@ -13,9 +13,9 @@ POST http://localhost:4000/api/users
 Content-Type: application/json
 
 {
-    "firstName"     : "user",
-    "lastName"      : "satu",
-    "email"         : "user2@gmail.com",
+    "firstName"     : "kyouya",
+    "lastName"      : " ",
+    "email"         : "kyouya@gmail.com",
     "password"      : "kesehatan",
     "re_password"   : "kesehatan"
 }
@@ -23,13 +23,26 @@ Content-Type: application/json
 
 
 ### MENG DATA USER  BERDASARKAN ID
-PATCH http://localhost:4000/api/users/14
+PATCH http://localhost:4000/api/users/9
 Content-Type: application/json
 
 {
-    "tescemas" : 10
+    "firstName"     : "kyouya",
+    "lastName"      : "kun",
+    "email"         : "kyouya@gmail.com",
+    "password"      : "kesehatan",
+    "re_password"   : "kesehatan"
 }
 
+
+### UPDATE DATA TEST USER BERDASARKAN ID
+PATCH http://localhost:4000/api/users/test/9
+Content-Type: application/json
+
+{
+    "tesstress" : 50,
+    "teskepribadian" : 10
+}
 
 
 ### DELETE DATA USER BERDASARKAN ID
