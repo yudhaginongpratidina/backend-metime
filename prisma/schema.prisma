@@ -38,7 +38,7 @@ model User {
 
 model Admin {
   id        Int     @id @default(autoincrement())
-  email     String
+  username  String
   password  String
 
   createdAt DateTime  @default(now())

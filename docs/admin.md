@@ -4,7 +4,7 @@ POST http://localhost:4000/api/admin
 Content-Type: application/json
 
 {
-    "email" : "admin@gmail.com",
+    "username" : "admin",
     "password" : "admin",
     "re_password" : "admin"
 }
@@ -14,7 +14,7 @@ Content-Type: application/json
   "msg": "Admin created successfully",
   "data": {
     "id": 2,
-    "email": "admin@gmail.com",
+    "email": "admin",
     "password": "$2b$10$PnmwE8VvMNSqSAN0iT0KiegjIoLhDhe//w8g10UwfLo/XBPG1cf6q",
     "createdAt": "2023-12-06T14:10:06.324Z",
     "updatedAt": "2023-12-06T14:10:06.324Z"
@@ -32,7 +32,7 @@ GET http://localhost:4000/api/admin
   "data": [
     {
       "id": 2,
-      "email": "admin@gmail.com",
+      "email": "admin",
       "password": "$2b$10$PnmwE8VvMNSqSAN0iT0KiegjIoLhDhe//w8g10UwfLo/XBPG1cf6q",
       "createdAt": "2023-12-06T14:10:06.324Z",
       "updatedAt": "2023-12-06T14:10:06.324Z"
@@ -51,7 +51,7 @@ GET http://localhost:4000/api/admin/2
   "msg": "success",
   "data": {
     "id": 2,
-    "email": "admin@gmail.com",
+    "email": "admin",
     "password": "$2b$10$PnmwE8VvMNSqSAN0iT0KiegjIoLhDhe//w8g10UwfLo/XBPG1cf6q",
     "createdAt": "2023-12-06T14:10:06.324Z",
     "updatedAt": "2023-12-06T14:10:06.324Z"
@@ -65,7 +65,7 @@ PATCH http://localhost:4000/api/admin/1
 Content-Type: application/json
 
 {
-    "email" : "admin1@gmail.com",
+    "email" : "admin1",
     "password" : "kesehatan",
     "re_password" : "kesehatan"
 }
@@ -75,7 +75,7 @@ Content-Type: application/json
   "msg": "Admin updated successfully",
   "data": {
     "id": 2,
-    "email": "admin1@gmail.com",
+    "email": "admin1",
     "password": "$2b$10$1OwgGVtrgJ8mVLI2hlSqpuG5YajayF8QiWSNrW7j0zus7Kgk7hEm2",
     "createdAt": "2023-12-06T14:10:06.324Z",
     "updatedAt": "2023-12-06T14:10:06.324Z"
@@ -90,7 +90,7 @@ POST http://localhost:4000/api/admin/login
 Content-Type: application/json
 
 {
-    "email" : "admin1@gmail.com",
+    "email" : "admin1",
     "password" : "kesehatan",
     "re_password" : "kesehatan"
 }
@@ -100,7 +100,7 @@ Content-Type: application/json
   "msg": "success",
   "data": {
     "id": 2,
-    "email": "admin1@gmail.com",
+    "email": "admin",
     "password": "$2b$10$1OwgGVtrgJ8mVLI2hlSqpuG5YajayF8QiWSNrW7j0zus7Kgk7hEm2",
     "createdAt": "2023-12-06T14:10:06.324Z",
     "updatedAt": "2023-12-06T14:10:06.324Z"
@@ -117,7 +117,7 @@ DELETE http://localhost:4000/api/admin/1
   "msg": "deleted successfully",
   "data": {
     "id": 2,
-    "email": "admin1@gmail.com",
+    "email": "admin1",
     "password": "$2b$10$1OwgGVtrgJ8mVLI2hlSqpuG5YajayF8QiWSNrW7j0zus7Kgk7hEm2",
     "createdAt": "2023-12-06T14:10:06.324Z",
     "updatedAt": "2023-12-06T14:10:06.324Z"

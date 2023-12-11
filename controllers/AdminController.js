@@ -14,17 +14,17 @@ const getAdmin = async (req, res) => {
 
 const createAdmin = async (req, res) => {
     try {
-        const { email, password, re_password } = req.body;
+        const { username, password, re_password } = req.body;
 
-        const emailExists = await prisma.admin.findFirst({ where: { email: email }})
-        if (emailExists) return res.status(400).json({msg: `Email: ${email} already exists`});
+        const usernameExists = await prisma.admin.findFirst({ where: { username: username }})
+        if (usernameExists) return res.status(400).json({msg: `Username: ${username} already exists`});
 
         if (password !== re_password) return res.status(400).json({msg: "Passwords do not match"});
         const hashedPassword = await bcrypt.hash(password, 10);
 
         const response = await prisma.admin.create({
             data: {
-                email: email,
+                username: username,
                 password: hashedPassword
             }
         })
@@ -54,10 +54,10 @@ const updateAdminById = async (req, res) => {
         const exist = await prisma.admin.findFirst({ where: { id: Number(id) }});
         if (!exist) return res.status(404).json({ msg: 'Admin not found' });
 
-        const { email, password, re_password } = req.body;
+        const { username, password, re_password } = req.body;
 
-        const emailExists = await prisma.admin.findFirst({ where: { email: email }})
-        if (emailExists) return res.status(400).json({msg: `Email: ${email} already exists`});
+        const usernameExists = await prisma.admin.findFirst({ where: { username: username }})
+        if (usernameExists) return res.status(400).json({msg: `Username: ${username} already exists`});
 
         if (password !== re_password) return res.status(400).json({msg: "Passwords do not match"});
         const hashedPassword = await bcrypt.hash(password, 10);
@@ -65,7 +65,7 @@ const updateAdminById = async (req, res) => {
         const response = await prisma.admin.update({
             where: { id: Number(id) },
             data: {
-                email: email,
+                username: username,
                 password: hashedPassword
             }
         })
@@ -80,8 +80,8 @@ const updateAdminById = async (req, res) => {
 
 const login = async (req, res) => {
     try {
-        const { email, password } = req.body;
-        const admin = await prisma.admin.findFirst({ where: { email: email } });
+        const { username, password } = req.body;
+        const admin = await prisma.admin.findFirst({ where: { username: username } });
         if (!admin) return res.status(404).json({ msg: "Admin not found" });
 
         const isMatch = await bcrypt.compare(password, admin.password);

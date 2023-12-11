@@ -5,24 +5,24 @@ GET http://localhost:4000/api/admin
 
 ### REGISTER ATAU MEMBUAT ADMIN BARU
 POST http://localhost:4000/api/admin
-Content-Type: application/json
+Content-Type: application/json 
 
 {
-    "email" : "admin@gmail.com",
+    "username" : "admin1",
     "password" : "admin",
-    "re_password" : "admin"
+    "re_password" : "admin" 
 }
 
 ### MENDAPATKAN DATA ADMIN BERDASARKAN ID
-GET http://localhost:4000/api/admin/2
+GET http://localhost:4000/api/admin/1
 
 
 ### MELAKUKAN UPDATE DATA ADMIN BERDASARKAN ID
-PATCH http://localhost:4000/api/admin/2
+PATCH http://localhost:4000/api/admin/1
 Content-Type: application/json
 
 {
-    "email" : "admin1@gmail.com",
+    "username" : "admin",
     "password" : "kesehatan",
     "re_password" : "kesehatan"
 }
@@ -37,9 +37,8 @@ POST http://localhost:4000/api/admin/login
 Content-Type: application/json
 
 {
-    "email" : "admin1@gmail.com",
-    "password" : "kesehatan",
-    "re_password" : "kesehatan"
+    "username" : "admin",
+    "password" : "kesehatan"
 }
 
 
