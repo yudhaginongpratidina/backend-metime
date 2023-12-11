@@ -1,0 +1,19 @@
+### TEST DEPRESI
+GET http://localhost:4000/api/test/depresi
+
+
+### TEST STRESS
+GET http://localhost:4000/api/test/stress
+
+
+### TEST BUNUH DIRI
+GET http://localhost:4000/api/test/bunuhDiri
+
+### TEST CEMAS
+GET http://localhost:4000/api/test/cemas
+
+### TEST KEPRIBADIAN
+GET http://localhost:4000/api/test/kepribadian
+
+### TEST BURNOUT
+GET http://localhost:4000/api/test/burnout

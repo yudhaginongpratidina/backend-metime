@@ -13,9 +13,9 @@ POST http://localhost:4000/api/users
 Content-Type: application/json
 
 {
-    "firstName"     : "kyouya",
+    "firstName"     : "kyouya1",
     "lastName"      : " ",
-    "email"         : "kyouya@gmail.com",
+    "email"         : "kyouya1@gmail.com",
     "password"      : "kesehatan",
     "re_password"   : "kesehatan"
 }
@@ -23,7 +23,7 @@ Content-Type: application/json
 
 
 ### MENG DATA USER  BERDASARKAN ID
-PATCH http://localhost:4000/api/users/9
+PATCH http://localhost:4000/api/users/1
 Content-Type: application/json
 
 {
@@ -36,12 +36,16 @@ Content-Type: application/json
 
 
 ### UPDATE DATA TEST USER BERDASARKAN ID
-PATCH http://localhost:4000/api/users/test/9
+PATCH http://localhost:4000/api/users/test/1
 Content-Type: application/json
 
 {
-    "tesstress" : 50,
-    "teskepribadian" : 10
+    "tesdepresi" : 10,
+    "tesstress" : 11,
+    "tesbunuhdiri" : 25,
+    "tescemas" : 30,
+    "teskepribadian" : 45,
+    "tesburnout" : 50
 }
 
 

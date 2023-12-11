@@ -1,0 +1,23 @@
+### RATA DEPRESI 
+GET http://localhost:4000/api/rata/depresi
+
+
+### RATA STRESS
+GET http://localhost:4000/api/rata/stress
+
+
+### RATA BUNUH DIRI
+GET http://localhost:4000/api/rata/bunuhDiri
+
+
+### RATA CEMAS
+GET http://localhost:4000/api/rata/cemas
+
+
+### RATA KEPRIBADIAN
+GET http://localhost:4000/api/rata/kepribadian
+
+
+### RATA BURNOUT
+GET http://localhost:4000/api/rata/burnout
+

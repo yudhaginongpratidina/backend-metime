@@ -24,6 +24,8 @@ const TestimoniRoute = require('./routes/TestimoniRoute');
 const AdminRoute = require('./routes/AdminRoute');
 const ForumRoute = require('./routes/ForumRoute');
 const ForumCommentRoute = require('./routes/ForumCommentRoute');
+const TotalTestRoute = require('./routes/TotalTestRoute');
+const RataTestRoute = require('./routes/RataTestRoute');
 
 // ROUTES
 app.use(UserRoute);
@@ -32,6 +34,8 @@ app.use(TestimoniRoute);
 app.use(AdminRoute);
 app.use(ForumRoute);
 app.use(ForumCommentRoute);
+app.use(TotalTestRoute);
+app.use(RataTestRoute);
 
 // ROUTE JIKA URLNYA TIDAK ADA, MAKA AKAN MENAMPILKAN PESAN JSON YAITU NOT FOUND
 app.get('*', (req, res) => res.json({message: 'Not Found'}));
